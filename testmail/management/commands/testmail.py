@@ -10,7 +10,7 @@ class Command(BaseCommand):
         if len(args) == 0:
             email = raw_input('Where should we send the email? ')
         elif len(args) == 1:
-            email = args
+            email = args[0]
         else:
             raise CommandError('Wrong number of arguments')
         m = EmailMessage(
